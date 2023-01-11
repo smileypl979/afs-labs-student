@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: db-service
+  namespace: psmiley
+spec:
+  type: ClusterIP
+  selector:
+    app: db
+  ports:
+    - name: db-service
+      port: 5432
+      targetPort: 5432
