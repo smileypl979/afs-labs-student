@@ -22,12 +22,10 @@ spec:
         app: app
     spec:
       containers:
-      - envFrom:
-        - configMapRef:
-            name: feature-toggle
-        - secretRef:
-            name: db-secret
         name: app-deployment
         image: harbor.dev.afsmtddso.com/psmiley-harbor-project/app:971c881-fab9a2b
         ports:
         - containerPort: 5000
+      envFrom:
+        - secretRef:
+            name: db-secret
