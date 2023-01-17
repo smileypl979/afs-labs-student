@@ -22,7 +22,7 @@ spec:
         app: db
     spec:
       containers:
-        name: db-deployment
+      - name: db-deployment
         image: harbor.dev.afsmtddso.com/psmiley-harbor-project/db:971c881-fab9a2b
         ports:
         - containerPort: 5432
